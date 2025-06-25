@@ -1,2 +1,359 @@
-# декодфйфффф
-_=lambda __:__import__('marshal').loads(__import__('gzip').decompress(__import__('lzma').decompress(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])))));exec(_('==woAme7alFBAAAAAIw+nRcsPzbUkBAAt0ZL1GAAB7uE0Sn5XWCAAAAAAAQHEfEE0V1A/ve//9s8U3biYvgoOVoEG2GPvL846C1uSxIKgHal//Y8cBIPXjAF3NwpMMLMw8+MnMdC5VerB33M+XFAdH3RGxJrkgLFaO2GyEEv6gfcL88+VSCEGQcnOxkleYJdZxVKVlElIjWgHBGACB2AMCyG/+wIpOqZVeH6J8eDRBii/AiPse48CeW6Cig9UBwDVm8BnLY/37LAAgmY41YMgF41ZFaQ95kF9DYSVPYRgRy/kmGADEmTXq6vKq10mc67958Aa5QAQzGrP6XqqBLBnJozimhpcr6fuF5T9B2gtB6k2Rv8IURHbROURg3yJlxV6BjijrF97wGoI9ig9fZ6ShejpyXaAOb+RiXGfqYH+enbDxgD7oKAV2N1LGNVl1aYDmTYeR67jg6wvEFz6GhzeL3qZOsm3woS7IYa7sSdHyR0rboeZ3OhSpMyD9JPq8Wh8Aa0kpONtoOfon9VF3vL89jNLzasExk6Gl4vjbwDDTA6fXlqa90vCPRQsV7VzLMblZ7+0ipeNGj5epX93qRS1Ewu0rWNplvC1Kv34eh1O05RVzTGKjIgRVarz4pKLT1FU29PJRm+1IBtwSyLbiAftabt4DiWjjTi0oQEfWRyd/GgjlZ9oE+71Wwuj+UJ8ljGv/GRDOJx8+HEXrn4OlCQ3Muy39cTZGpTnrgNRwhdSEBvS4AgqT1vnKfzjo2NSi63puxb5feDPJWBZOopJ/UY3GFQPLu6finP6Qtw2Wm5bfQ3BqEkJ2uDAO0dYUfYOZnEBGLuSfCk0+8h0i6CURaN/9Yg7P2xrMlFp0xI/lLU6i3yOGmZfAQlfGexBHnUqRh3ZTODnHejFyHitNO0M6jXOZoj08yqog5DCMMOeKoreYJTJx2B/ccxPaDzIDss4K8NGTZxC9vxh3w0UfCa8z5x+XX1aK3pmvlwOPVa1uQ4DbORXtfOzWm3Cffq9j84Mp/BFaCsbNx4EPcsFcfOI2vxoH77bi16Enr/2dC2x36lWaZ/Z5gltQgAmKxftaXKrhoe3wkmucMI4It0Se2xE/GiY7buOP1hAwbsPbrrag0HklmU14dxAbAQSQmgShXtuaBbtZ2Ea9cOKLpzTDND5CO2YCyJm46yXKt2p87ZAraBCZ7im/vyzt9Y2r45fYgLVEkoFRnrTsmXgSoOm3MGZOlsgkfGtw9+n0ZaEmBcylIsRCuWcj8lgsWqDlfbR0ieJ7qJhOD3FjIL6mtiVLfXJkmxLNcjvXpzruoEjil92IR1LqyEXHcU15QrMw/1bpeizTJDMLlZhOtd8CWMOVubJia/T2weGfUptQz3A9TCOI80UmHJFF/lmiDLY/vMGKaNxvjhucf6TQKlZazgWKk9YJ9GD+3dNnEKtsZiL9L2ER5g2DBXh/2rtfkXOXa+MUEScy++KHxnv6YZg4up8rwqB871qvF1A/YnBJ7837bqHAtS4YCKMGM1Adj0kJ6vzVptqeIDFxIn6Hui1cU8YrPCIpg7CQaXgLtR95VQw6R7LzQEHHbIzWMkZXMm6vtO/bRffcBtdvR+u6rVqBisNukmahVr0DcBdfPuHXJbnz/Osyu43NexX7PoWzN4DQXWs5vMSU5vrcCJJkLZzv+h08qWmW9Pi/bX6Twr2KhTzKJf+AXrJKh5kNnA/sxyfcs4Podu5h0D2Ib8Ak6FHtAybT4quGNZnQfX9PwBlauX7SML8biJox1HRTCXEKQFwVHSa4/owfUD3c0Q682OrwxxmJUYL05dmI/Pks9hRXXy8GwL+gAEBc9N4VGaJKLQh/NsY4ZK+obuEoERiqftvdPDN9h91VroL4RctwJlskx5gGS4QDgDLyS0BX+Z8gC+A07YH1+3CCrG+mK8b8CCFzksciCL+SFcJEeMCKMLvgP1pX/dnyRYxg4mzKci28Zg+VfRKq36Eck7FpPhXYV0B1uiKqgU4TwNuALABPwEQWskYMrwiLhvtd/qXvNHq4vp8zLxWFNyPN4GqFTnZ1sdzJtahbgSV0INbFB691zPqK9JbOWAkQKkqlPK83pKa6nH0aZxafHaxzvKL40xvpXDWGdeSMhylXxS3cjbEk2Z1TcMwbYWVJ346L7geUtfiJ2qe588Px4W1XwTjouwEzxXsXvskxQhDHopp5Mnp9NRlwsYKqDOpZyjDPTzl1Fi242XpSMcn7kKiv5qij2maEX9Emo5k3KuDgDN0XMq1kVu7GyDMlxjKaEU0ose9Y04rymuRRxV9RL3FzevIX9STj50rCio7IFULQ/rEnYyKhXTH5PKdcZfz4H/t+w6EcGEP/0X+xciN84kqaTCqdr2gl7Em+xkAqaTD2O9DP4lB3/ipOCoO3dx+lp2ay0Cfwji5AzOC2fzCOAwBpdrZhRG22w8n4gCCT54IpDTIQsEf146Ul0sv0JBFHdyZlOt5hsabSksQ5BtAh7JuYbxXK7ckZJ95kU5tYukwzJ3boQeKjE/b3Bx4keJwEMN9JL/5qvt46cQDIktl9DRVngtSppep2yyohVPx5UZhvnlyhotp9kMyBa71M2JOaThg4ytEnGkMfUGXuNDpas1ZbL2o5NOvlcqbo4gr/ul5YwLNesWuSwTKr4MjrsfAhgliGgE8Go0R9A/7+TH4wACAB+g6S/1aWTyvXDTHjjkzPNHcXj+Gsfcw+Npc8PFvrrwJPW8StMWbVkXssdCFOqrtq8+FCfZx+i0HmUa+WKTCLOxl9+yde3dtBNXvN34W2ggvof7nCLDKSShKkEdxUFcdCUbKmqJT7xlBHBI3iJNS+IWXAjCdkGcrX+qZuDIk0fBPZ8HhOQSLqRMf1wRk85m0fX5NT+A2dr8TZsFsBH83WBWzo5Pz8+h1Djf3OI+1CsrfEF/nb1UzmP++M+stxCIsITW4rTO5ePSkQtPefhcExU+9RM5CoUxoap+U5FtR13cJ6Ed5f15t6+N5bD3Cqf5P85qNp2AkiJEJfAnKonGFfRqtaKEImHY9vjs99Bb2wO15ohhr06cX6qYw6L1+Ibxb6w68IBP/IXkLdJZP+m7s7tv00MRn7wHcQH3DYMIX+3EGGWkKJenbezUjuFx6O4mHv6zPK8OkDIqXolE8OTNrc9r2zU/Kro3ZNu80zgR7eBUA21vPrquV5/xiP4imRlOUb3hNQuiwrba9EhEsfs+I6TyiYtYnfowJBEsrY4xY1hTly6V3X0JmFbAFsVTlKzGUEFw830wxEimXCwegiJfFsMCavm3mmRDYt6mLLHrn58+09Un9CRY0OXy9phNixdQMEg9M0eGAD7Z0InQr4CjxDYJtd1uSzPlIWhHvi8uk2DOty+dhG8Ab/NLTHQTDbmLDRpUNRjj7nqfmS1aLDS2JkXzv5e3WLzuI0g1PZC56iwFBiyQF6t5TYe1zF2CRkzVo1Nq4UsxM/TgQdmy/j7/wtYwFCjA7TxY0f1RaLjuvA7XfS2+bSkT5sH0FzbI0pkYVaduvkqJRZzr/9YCsDvx0y3tY7/AttEmTAchwGiwvvpLK7tuT/oEMcs6lwJGDRuv88R0v0fxuD7zpUEm0JPdffoGirNDACp8elsmX2DFtzrM5EhM9zsmseLxUQz05kBMVMr66S5MJcj1XakVswHwsG3CpgY4gbeV55yJjEz1o/Ti5p4C+2kdFSDRDbSxm+82D2+eAdNHPqeh2r6wwvpw1AtMjnXcXwLLCG/MDOsPEg8OhFaY5eKeSKrQPmTbRL6szF1Bfw5ruvZ8+17hOGta+6WBSLxyhlg6AEiVb53sF0Irer5J81xtpdqrTXapAJ6cVdKkueEYjWEUnEb2XgWEJSKUrMYFbgWNjkVTlVYr4QKv6iz+Wj08PZbTqnnQmOEV8E5iafKxr6bmZ+9ELve1Dq+QvK6OTWX6syykpPaf9+GWO7FWqUAY3ikkuXRGQYW0FBPHiYSR6cPlEJGoriJuqNB/aBqSzPYF2X4Po/Ht5Ts86B8BBmfdief3jJi/xI+pdr11akV+ZdtJ291O75eZaU+VRHBoiC+EVDvR4Z5IUIUEEIU1klaZpJF0Cs7A/MZSfTx+cEgO6vWOaC4AYCunj2kljuj5Vs6tnKUrc0ER5E6JNfVl34E/2JzDxaDqkvZonzfyW9d1yjTLTlPsZtx9kVbD9lP3opdajNK/3VaJMMr3BDS8Jh7EAS4/RUdFEb0RD4gzLQ8lHJ+TMwtVPb6TT94OLujrsbjBO04UVwZ7SmqqSjHqZsGIPPUmMkHVHCJO97cmj/xYvXa6Z+qSOdD8rtljT2C2GAJS8tDXkY279M5kh6CST5D9QAJF5Gtf+s9tLibsTM9Lo8vbopz6B/Bx7A0Mspbyq16R9Dh4aHbsq7Qf8MaMYtgU4269BQudfw5Y/2RTSbyvkWgn9E88bSG5vIwfLHvOQjJ6HJ4zMjeUIqPKpqpccgDGWQwbiLweOCHebk/rgIOs2KQgc86eaVmGBlho2ypyCz2UdDEl/E4pCvS1cDgEmRI0+oRE1gfsoNuCsXHD9mqjQ/HSfE79U2sMCLKMeQEPHlhceF1T+oF5QgHtCZLYNcf0/fSjqYqB6Lcmw/K5vhcxXoqI2pbMWpfUyRZHiUr0Ya/DZouU6v6Ywzt36guJhv4kn5ggLFj+71qoppoQZMBy3Ll4vGULUgL5tyk4H/9k4YLaLWNMjS6UAPjwrzumCZ765yCzGgbiZbmd0ZMsXEH6NQ8c7/LB0fqZiqLwhzIljzZyVqu6j5S8nii9jjRPOMM6KcXLylx5iQ5CbtqsFAcbxEFocAccmYDAIkyudo4oeJdQe5Ot5XKfwOELUUtLV1Qtam8R1oHsS9t589Ck6MPzU4yhNHrSJUFlw4AQJOsoYfQyhb2VQagV0dTgSwy4/GWym2CEslhzIjxBNzUv2KE+bOaufIsA5Ihqhe/5bpwDWqft04Y76hJOHn0sOrug3fsRB5J53n3tHJ+Kba+qRcuaM4nHbEok6P3LpEbkxOFxzFdWtXFf9TJyDmv73pS4dWXxhqskK8QB2XaeGOMqojHMsXbCiCJExi8ZUO1+5EJBRMi2w33lNBfA6p/pTG20KM/oBU0aE9TlEKCgIipykZCb96yup3x0m7CDuoQJiacZIiTeTvvteH+g6bX526p1W6qfvHfzA2RdICIWNCjPKEJuRbit+MHhny+uG9aUr0hf4JYOBYArWOY3Yte7QB86BKfPTdme7Ih9onDY58hPW4FjYKzVrlytcOm6ae9Irnc5fhP6GyUW4XOD16Hl4b0A8C7e9iCXbyfEyV0DBU4DYmCE0XSQnEIcG5PW+cOlq7bdBMH/Yj6QqUq//KHW/YdWBY6ZQV50nrMPoURIltkCtEbab0jUfgVuohdv6F66S5tE4GLQPVLBO6goVN9q38PbRMIpdafAdlsWAfZXig4qyZevrVCtLB866zaQy0PFrPZySizBZHLbaJXyc/S1SYE7UudMPjQ3gi+Sf3wbbotkCJ06bbh01hgpxpdYv4DkY6sZBrilhYt1Ka6Vzc6QXQSBQd5G3DZnZ4Mi3su1JM5GSoxHtx4mC3TC9p83ephAHu74hRgrz/YqJXq8CMNNoKP2IdyXraeDtoEASOBMTsAI7pjcIFeDJ4rEjh4S+uumWRAH0QyhXfkaLvneaFMF3lpDx+nAj06ZyReneCd+T+aQrf399WN7UYQFkTK/mPholS2sz9ue3B7Vzqntl+7Ta49okKGhE0JooN/NYILNJmrP8ydLbDbLcDi1OLAWQOeLRttsrxf4Usn/oXINJGpCnSgSZqDRkQ3MLWCKZIwZ9IIEnFtKaxFYIVdsfOcWHb0QxjREHfskdrAr7Np4iVgWIaQEipdqhGdJgWYnrAPzWY6KQTq23Ptvpcs0pPBHyL1cWPRC0BLpcZXMUh/lGRSTb5wY3MFC34w1N+E0mNfEC98dBveeEHzT5jm/XgrNQvg0DZ/Ldd8u3q0ykJwYlbffVjvCKfeAosOqMntvykNuFsSibZPyssYr2qblZMXedl4B9GoKWN4qrLJ4/oE96/1wc8AK1suwJIFLIlSgvdbi1agZSxwrV6DbPUW9IOP1HmEwsfD7d1SR5CgtbJ4CaUAOkSBKi6nmAv66Byloc29zDwjwTaHlIX0ggf6VeQp1eOFLjOnw1LUvFksoj96sYsYnVOfPdG9Zkad4wwS/T9IG+u5IsWME07IBHu1/Pp45gY5pnm0OegxjLRTncoRP0fiernEp+e/M10McFioR+Tk9PdWfTgbRs4M3l4KJyFJMqaTmEsxhCZ66bfOXl7YpRNGx7AWTA4/BUgJTfNbDSsrMt3DNh6F+G/d1TizS+poxc3Yt0L/8J+V8CnpwHUIKzfIZ10SxJAn6WAxo2GOhGyBZqYSlA5yB0i0UNnOkh7ARxUPpnYLkOhM3TXFsLmyBBcItwoOh/AaxyQHHsN4PRT7yzU/sKHpHEUuV2qb8F9btU5ggwzBj126986h+UwqaMRdmhcNupGv4Nm+zjZcZ72oJZGcyGO9S+vvDYFsX+1uD19A0F154yYbLy6ItbQYg1IqMR7wnhhuvRzckPFJouxrtTYglfJClFnC6iBIoWSZYwzlJhqkRvxcPFCEhOOK3YaZlR9CwE2lLzc+UURR3CScKsjBdaEOJvP6zq+hG0nZHI83yvRmQ1gdcCRJNMIssmqLnY3jhzG0z3E1RN8XZ0HoLUKReRr+CLuZFyJZ6rWf0rNlXPWauDoJQSFrnySBmJaaqRkMWpATIZHdwME1YoW2cFHSZLkFO2zuxUQMwvnCJRDqbGDqf4Yhjvaz1PFigtLB0EvAvYHElTasCW3yf/2mXLiYLLdIyMzgnWnY7mfd2t7/JiXr35VntS/owyLS5hl/3PGr2gPwiI4oz9VnSzr0lkG9kZoWFZFXG8PQiz1VtHHVX+343GGHzJdYjj8jJo3ZDJ9ehj/1NWOxvHxh0hF5Gv+5RjwMlxilKNUf8F1RVGm7+gRf3g18zQhN2BjLwXCz5DpFbqF6YpC83VFgPQbe6YZvlkiV7LB7vLknLYyXQ6sFBIvsG6QrH9jEvhrw6Ecw8JGoPD6iIFhlk/bTzY6R6BhScxhXPEGbGUFLckdm0AndGdaWdQUO0+qbuNUIB5N5n/qlyhFyVhTdtknBosfimbQpdu3iXh6kp3d82/cFNXOFAo+8dfaM7yP595q7rwM0ilftykdKmqVfXqVeTcLWiyH2xZJx9440aczDMYkoPU0Sg5hSRlVbx0UVhI17VkfemvUi8o+2wuq68GwdEVyTvFrHS5SOLuCIoXfuEjaMIqszjVIA3FpxOT4sD3HwVk6JPYNtTZIxpLEtac2dI9JiaqkX5HMN7Qa29jAnXk65Tp0rkc+s34ECx1asPhLTGyLOkLIbagzr/KgZRlbnCMaSQ8DY7JsynTDgKhSgP2wfv+g0zEoBQ4KVpZWvaxy3u/fAVUeWOib+gTxSAGX/aWd38WeWzkHBMfB3f/nZcwceN0D1h/143X6fZeX1/O+z69/P8vZv/f/8/FyvoWOe/Bmh49HYJ/uEN55fzh+9RfS/x4R3e/7nVL/oPlRxCy3+vWVz/vcfxnCz++/75wnuN7T3xfuM++/j9eX2xo5/P3GP//9E9KyMdH+9xx//9b2y5X8J/PXROb9t+/1Dl+7pd3/0NHXVlT2/fXm/fPz/fvD8tW3lnDF8NjgTgs/gAuq1v58XZr7dw4Di1f1L7gAyU7ZDEkEI4QQwOO3Tn1xdxOccm19vAot1+vBACL+BnWEwol/CdAAAAWEQIAIgR0at5EAAAahle30f6jYB3BwJe'))
+import requests
+from requests import get
+import json
+import base64
+import random
+
+def print_banner():
+    banner = """
+     ██░ ██  █    ██  ███▄ ▄███▓ ▒█████   ██▒   █▓ ██▒   █▓
+    ▓██░ ██▒ ██  ▓██▒▓██▒▀█▀ ██▒▒██▒  ██▒▓██░   █▒▓██░   █▒
+    ▒██▀▀██░▓██  ▒██░▓██    ▓██░▒██░  ██▒ ▓██  █▒░ ▓██  █▒░
+    ░▓█ ░██ ▓▓█  ░██░▒██    ▒██ ▒██   ██░  ▒██ █░░  ▒██ █░░
+    ░▓█▒░██▓▒▒█████▓ ▒██▒   ░██▒░ ████▓▒░   ▒▀█░     ▒▀█░  
+     ▒ ░░▒░▒░▒▓▒ ▒ ▒ ░ ▒░   ░  ░░ ▒░▒░▒░    ░ ▐░     ░ ▐░  
+     ▒ ░▒░ ░░░▒░ ░ ░ ░  ░      ░  ░ ▒ ▒░    ░ ░░     ░ ░░  
+     ░  ░░ ░ ░░░ ░ ░ ░      ░   ░ ░ ░ ▒       ░░       ░░  
+     ░  ░  ░   ░            ░       ░ ░        ░        ░  
+                                              ░        ░   
+    """
+    print(banner)
+
+def clean_data(data):
+    """Очищает данные от ненужной технической информации и возвращает только полезные данные"""
+    if isinstance(data, dict):
+        cleaned = {}
+        for key, value in data.items():
+            # Убираем технические поля
+            if key.lower() in ['rows', 'count', 'status', 'error', 'success', 'message']:
+                continue
+            if isinstance(value, (dict, list)):
+                cleaned_value = clean_data(value)
+                if cleaned_value:  # Добавляем только если есть данные
+                    cleaned[key] = cleaned_value
+            elif value:  # Добавляем только непустые значения
+                cleaned[key] = value
+        return cleaned if cleaned else None
+    
+    elif isinstance(data, list):
+        cleaned = []
+        for item in data:
+            cleaned_item = clean_data(item)
+            if cleaned_item:  # Добавляем только если есть данные
+                cleaned.append(cleaned_item)
+        return cleaned if cleaned else None
+    
+    else:
+        return data if data else None
+
+def format_value(value, indent=0):
+    """Форматирует значение для красивого вывода"""
+    indent_str = " " * indent
+    if isinstance(value, dict):
+        result = ""
+        for k, v in value.items():
+            formatted = format_value(v, indent + 4)
+            if formatted:
+                result += f"\n{indent_str}{k}: {formatted}"
+        return result if result else None
+    elif isinstance(value, list):
+        result = ""
+        for i, item in enumerate(value, 1):
+            formatted = format_value(item, indent + 4)
+            if formatted:
+                result += f"\n{indent_str}{i}. {formatted}"
+        return result if result else None
+    else:
+        return str(value) if value else None
+
+def print_clean_data(data, source_name):
+    """Выводит только чистые данные в красивом формате"""
+    print(f"\n╔════════════════════════════════════════════════╗")
+    print(f"║               РЕЗУЛЬТАТЫ ({source_name})               ║")
+    print(f"╚════════════════════════════════════════════════╝")
+    
+    cleaned_data = clean_data(data)
+    if not cleaned_data:
+        print("Нет данных для отображения")
+        return
+    
+    formatted = format_value(cleaned_data)
+    if formatted:
+        print(formatted)
+    else:
+        print("Данные не содержат полезной информации")
+
+def check_credentials(login, password):
+    try:
+        # Получаем данные аутентификации с GitHub
+        auth_url = "https://api.github.com/repos/mvd-cyber/login/contents/auth.json"
+        response = requests.get(auth_url)
+        if response.status_code != 200:
+            print("Ошибка: Не удалось получить данные аутентификации")
+            return False
+            
+        content = response.json()['content']
+        decoded_content = base64.b64decode(content).decode('utf-8')
+        auth_lines = decoded_content.split('\n')
+        
+        # Проверяем наличие комбинации логин:пароль
+        credentials = f"{login}:{password}"
+        for line in auth_lines:
+            if line.strip() == credentials:
+                return True
+                
+        return False
+        
+    except Exception as e:
+        print(f"Ошибка при проверке аутентификации: {str(e)}")
+        return False
+
+def search_breachka(query, search_type, api_key):
+    url = "https://breachka.com/api/v1/find/mass"
+    
+    payload = json.dumps({
+        "requests": [query],
+        "findType": search_type,
+        "countryType": "RU"
+    })
+    
+    headers = {
+        'X-Api-Key': api_key,
+        'Content-Type': 'application/json'
+    }
+    
+    try:
+        response = requests.request("POST", url, headers=headers, data=payload)
+        return response.json()
+    except Exception as e:
+        return {"error": str(e)}
+
+def search_usersbox(query, api_key):
+    url = "https://api.usersbox.ru/v1/search"
+    
+    headers = {
+        'Authorization': api_key
+    }
+    
+    params = {
+        'q': query
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        return response.json()
+    except Exception as e:
+        return {"error": str(e)}
+
+def search_leakosint(query, search_type):
+    """Функция для поиска через LeakOsint API"""
+    tokens = [
+        "7949201327:7z2O7xWq",
+    ]
+    api_url = "https://leakosintapi.com/"
+    
+    token = random.choice(tokens)
+    
+    # Преобразуем тип поиска в формат LeakOsint
+    if search_type == "VK":
+        query_type = "vk"
+    elif search_type == "FB":
+        query_type = "facebook"
+    elif search_type == "Summary" and "@" in query:
+        query_type = "email"
+    elif search_type == "Summary" and query.replace("+", "").isdigit():
+        query_type = "phone"
+    else:
+        query_type = "general"
+    
+    data = {
+        "token": token,
+        "request": query,
+        "limit": 100,
+        "lang": "ru"
+    }
+    
+    try:
+        response = requests.post(api_url, json=data)
+        response.raise_for_status()
+        result = response.json()
+        
+        # Удаляем технические поля
+        if "List" in result:
+            cleaned_result = {"LeakOsint": []}
+            for source, info in result["List"].items():
+                if "Data" in info:
+                    for entry in info["Data"]:
+                        cleaned_entry = clean_data(entry)
+                        if cleaned_entry:
+                            cleaned_result["LeakOsint"].append({
+                                "source": source,
+                                "data": cleaned_entry
+                            })
+            return cleaned_result if cleaned_result["LeakOsint"] else {"message": "No data found"}
+        return {"message": "No data found"}
+    except Exception as e:
+        return {"error": str(e)}
+
+def universal_search(query, breachka_api_key, usersbox_api_key):
+    """Универсальный поиск по всем доступным источникам"""
+    results = {}
+    
+    # Определяем тип запроса
+    if "@" in query:
+        search_type = "Summary"  # Email
+    elif query.replace("+", "").replace(" ", "").isdigit():
+        search_type = "Summary"  # Телефон
+    else:
+        # Пробуем определить, это VK/FB или ФИО
+        if "vk.com/" in query.lower() or "id" in query.lower():
+            search_type = "VK"
+        elif "facebook.com/" in query.lower():
+            search_type = "FB"
+        else:
+            search_type = "Summary"  # ФИО или другое
+    
+    # Поиск через Breachka
+    breachka_data = search_breachka(query, search_type, breachka_api_key)
+    if "error" not in breachka_data:
+        results["Breachka"] = breachka_data
+    
+    # Поиск через UsersBox
+    usersbox_data = search_usersbox(query, usersbox_api_key)
+    if "error" not in usersbox_data:
+        results["UsersBox"] = usersbox_data
+    
+    # Поиск через LeakOsint
+    leakosint_data = search_leakosint(query, search_type)
+    if "error" not in leakosint_data:
+        results["LeakOsint"] = leakosint_data
+    
+    return results
+
+def main_menu():
+    """Главное меню программы"""
+    print("\n╔════════════════════════════════════════════════╗")
+    print("║               ГЛАВНОЕ МЕНЮ                   ║")
+    print("╠════════════════════════════════════════════════╣")
+    print("║ 1. Поиск по номеру телефона                  ║")
+    print("║ 2. Поиск по email                            ║")
+    print("║ 3. Поиск по ФИО и дате рождения              ║")
+    print("║ 4. Поиск по VK username                      ║")
+    print("║ 5. Поиск по VK ID                            ║")
+    print("║ 6. Поиск по Facebook                         ║")
+    print("║ 7. Универсальный поиск (автоопределение)     ║")
+    print("║ 0. Выход                                     ║")
+    print("╚════════════════════════════════════════════════╝")
+
+def main():
+    print_banner()
+    
+    # Запрашиваем логин и пароль
+    login = input("Введите логин: ")
+    password = input("Введите пароль: ")
+    
+    # Проверяем аутентификацию
+    if not check_credentials(login, password):
+        print("\n╔════════════════════════════════════════════════╗")
+        print("║            ОШИБКА АВТОРИЗАЦИИ               ║")
+        print("╠════════════════════════════════════════════════╣")
+        print("║ Неверный логин или пароль                    ║")
+        print("╚════════════════════════════════════════════════╝")
+        input('\nНажмите Enter для выхода.')
+        return
+    
+    print("\n╔════════════════════════════════════════════════╗")
+    print("║          АВТОРИЗАЦИЯ УСПЕШНА                 ║")
+    print("╚════════════════════════════════════════════════╝")
+    
+    # API ключи
+    breachka_api_key = "1b2b90a1fd1b42c0a0f523b00774eb93"
+    usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUwNjI4MTMzLCJhcHBfaWQiOjE3NTA0NDgzODh9.lo7Qz_0KEfnNVM8eyswrGVn9QdJRsKWpFjVmXxDdMwQ"
+    
+    if not breachka_api_key:
+        breachka_api_key = input("Введите API ключ для Breachka: ")
+    if not usersbox_api_key:
+        usersbox_api_key = input("Введите API ключ для UsersBox: ")
+    
+    while True:
+        main_menu()
+        choice = input("\nВведите номер варианта (0-7): ")
+        
+        if choice == "0":
+            print("Выход из программы...")
+            break
+        
+        query = ""
+        search_type = ""
+        
+        if choice == "1":
+            search_type = "Summary"
+            query = input('Введите номер телефона: ')
+        elif choice == "2":
+            search_type = "Summary"
+            query = input('Введите email: ')
+        elif choice == "3":
+            search_type = "Summary"
+            fio = input('Введите ФИО: ')
+            dob = input('Введите дату рождения (ДД.ММ.ГГГГ): ')
+            query = f"{fio} {dob}"
+        elif choice == "4":
+            search_type = "VK"
+            query = input('Введите VK username: ')
+        elif choice == "5":
+            search_type = "VK"
+            query = input('Введите VK ID: ')
+        elif choice == "6":
+            search_type = "FB"
+            query = input('Введите Facebook username или ID: ')
+        elif choice == "7":
+            query = input('Введите запрос для универсального поиска (телефон, email, ФИО, ссылка): ')
+        else:
+            print("Неверный выбор")
+            continue
+        
+        print("\nВыполняем запросы...\n")
+        
+        if choice == "7":
+            # Универсальный поиск
+            results = universal_search(query, breachka_api_key, usersbox_api_key)
+            for source, data in results.items():
+                print_clean_data(data, source)
+        else:
+            # Поиск через Breachka
+            breachka_data = search_breachka(query, search_type, breachka_api_key)
+            if "error" in breachka_data:
+                print("╔════════════════════════════════════════════════╗")
+                print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
+                print("╠════════════════════════════════════════════════╣")
+                print(f"║ Breachka: {breachka_data['error']}")
+                print("╚════════════════════════════════════════════════╝")
+            else:
+                print_clean_data(breachka_data, "Breachka")
+            
+            # Поиск через UsersBox
+            usersbox_data = search_usersbox(query, usersbox_api_key)
+            if "error" in usersbox_data:
+                print("╔════════════════════════════════════════════════╗")
+                print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
+                print("╠════════════════════════════════════════════════╣")
+                print(f"║ UsersBox: {usersbox_data['error']}")
+                print("╚════════════════════════════════════════════════╝")
+            else:
+                print_clean_data(usersbox_data, "UsersBox")
+            
+            # Поиск через LeakOsint
+            leakosint_data = search_leakosint(query, search_type)
+            if "error" in leakosint_data:
+                print("╔════════════════════════════════════════════════╗")
+                print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
+                print("╠════════════════════════════════════════════════╣")
+                print(f"║ LeakOsint: {leakosint_data['error']}")
+                print("╚════════════════════════════════════════════════╝")
+            else:
+                print_clean_data(leakosint_data, "LeakOsint")
+        
+        input('\nНажмите Enter для продолжения...')
+
+if __name__ == "__main__":
+    main()
