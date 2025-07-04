@@ -124,8 +124,12 @@ def search_breachka(query, search_type, api_key):
     
     try:
         response = requests.request("POST", url, headers=headers, data=payload)
+        if "bad request for url" in str(response.text).lower():
+            return None
         return response.json()
     except Exception as e:
+        if "bad request for url" in str(e).lower():
+            return None
         return {"error": str(e)}
 
 def search_usersbox(query, api_key):
@@ -141,8 +145,44 @@ def search_usersbox(query, api_key):
     
     try:
         response = requests.get(url, headers=headers, params=params)
+        if "bad request for url" in str(response.text).lower():
+            return None
         return response.json()
     except Exception as e:
+        if "bad request for url" in str(e).lower():
+            return None
+        return {"error": str(e)}
+
+def search_depsearch(query, api_key):
+    """Функция для поиска через DepSearch API"""
+    url = f"https://api.depsearch.digital/quest={query}?token={api_key}&lang=ru"
+    
+    try:
+        response = requests.get(url, timeout=15)
+        if "bad request for url" in str(response.text).lower():
+            return None
+        response.raise_for_status()
+        data = response.json()
+        
+        # Форматируем данные для единообразного вывода
+        if "results" in data:
+            formatted_results = []
+            for result in data["results"]:
+                # Удаляем технические поля
+                cleaned_result = {
+                    key: value for key, value in result.items() 
+                    if key not in ['_id', 'score', 'index']
+                }
+                if cleaned_result:
+                    formatted_results.append(cleaned_result)
+            
+            if formatted_results:
+                return {"DepSearch": formatted_results}
+        
+        return {"message": "No data found"}
+    except Exception as e:
+        if "bad request for url" in str(e).lower():
+            return None
         return {"error": str(e)}
 
 def search_leakosint(query, search_type):
@@ -175,6 +215,8 @@ def search_leakosint(query, search_type):
     
     try:
         response = requests.post(api_url, json=data)
+        if "bad request for url" in str(response.text).lower():
+            return None
         response.raise_for_status()
         result = response.json()
         
@@ -193,9 +235,11 @@ def search_leakosint(query, search_type):
             return cleaned_result if cleaned_result["LeakOsint"] else {"message": "No data found"}
         return {"message": "No data found"}
     except Exception as e:
+        if "bad request for url" in str(e).lower():
+            return None
         return {"error": str(e)}
 
-def universal_search(query, breachka_api_key, usersbox_api_key):
+def universal_search(query, breachka_api_key, usersbox_api_key, depsearch_api_key):
     """Универсальный поиск по всем доступным источникам"""
     results = {}
     
@@ -215,17 +259,22 @@ def universal_search(query, breachka_api_key, usersbox_api_key):
     
     # Поиск через Breachka
     breachka_data = search_breachka(query, search_type, breachka_api_key)
-    if "error" not in breachka_data:
+    if breachka_data is not None and "error" not in breachka_data:
         results["Breachka"] = breachka_data
     
     # Поиск через UsersBox
     usersbox_data = search_usersbox(query, usersbox_api_key)
-    if "error" not in usersbox_data:
+    if usersbox_data is not None and "error" not in usersbox_data:
         results["UsersBox"] = usersbox_data
+    
+    # Поиск через DepSearch
+    depsearch_data = search_depsearch(query, depsearch_api_key)
+    if depsearch_data is not None and "error" not in depsearch_data:
+        results["DepSearch"] = depsearch_data
     
     # Поиск через LeakOsint
     leakosint_data = search_leakosint(query, search_type)
-    if "error" not in leakosint_data:
+    if leakosint_data is not None and "error" not in leakosint_data:
         results["LeakOsint"] = leakosint_data
     
     return results
@@ -269,11 +318,14 @@ def main():
     # API ключи
     breachka_api_key = "c151439eb6324be3aa935f9d7cc14c0e"
     usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUwNjI4MTMzLCJhcHBfaWQiOjE3NTA0NDgzODh9.lo7Qz_0KEfnNVM8eyswrGVn9QdJRsKWpFjVmXxDdMwQ"
+    depsearch_api_key = "70f282c4c785d794bd88be13e1b11dbf"
     
     if not breachka_api_key:
         breachka_api_key = input("Введите API ключ для Breachka: ")
     if not usersbox_api_key:
         usersbox_api_key = input("Введите API ключ для UsersBox: ")
+    if not depsearch_api_key:
+        depsearch_api_key = input("Введите API ключ для DepSearch: ")
     
     while True:
         main_menu()
@@ -316,13 +368,15 @@ def main():
         
         if choice == "7":
             # Универсальный поиск
-            results = universal_search(query, breachka_api_key, usersbox_api_key)
+            results = universal_search(query, breachka_api_key, usersbox_api_key, depsearch_api_key)
             for source, data in results.items():
                 print_clean_data(data, source)
         else:
             # Поиск через Breachka
             breachka_data = search_breachka(query, search_type, breachka_api_key)
-            if "error" in breachka_data:
+            if breachka_data is None:
+                pass  # Не выводим ничего при bad request
+            elif "error" in breachka_data:
                 print("╔════════════════════════════════════════════════╗")
                 print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
                 print("╠════════════════════════════════════════════════╣")
@@ -333,7 +387,9 @@ def main():
             
             # Поиск через UsersBox
             usersbox_data = search_usersbox(query, usersbox_api_key)
-            if "error" in usersbox_data:
+            if usersbox_data is None:
+                pass  # Не выводим ничего при bad request
+            elif "error" in usersbox_data:
                 print("╔════════════════════════════════════════════════╗")
                 print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
                 print("╠════════════════════════════════════════════════╣")
@@ -342,9 +398,24 @@ def main():
             else:
                 print_clean_data(usersbox_data, "UsersBox")
             
+            # Поиск через DepSearch
+            depsearch_data = search_depsearch(query, depsearch_api_key)
+            if depsearch_data is None:
+                pass  # Не выводим ничего при bad request
+            elif "error" in depsearch_data:
+                print("╔════════════════════════════════════════════════╗")
+                print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
+                print("╠════════════════════════════════════════════════╣")
+                print(f"║ DepSearch: {depsearch_data['error']}")
+                print("╚════════════════════════════════════════════════╝")
+            else:
+                print_clean_data(depsearch_data, "DepSearch")
+            
             # Поиск через LeakOsint
             leakosint_data = search_leakosint(query, search_type)
-            if "error" in leakosint_data:
+            if leakosint_data is None:
+                pass  # Не выводим ничего при bad request
+            elif "error" in leakosint_data:
                 print("╔════════════════════════════════════════════════╗")
                 print("║              ОШИБКА ПРИ ЗАПРОСЕ               ║")
                 print("╠════════════════════════════════════════════════╣")
