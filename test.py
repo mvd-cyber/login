@@ -317,7 +317,7 @@ def main():
     
     # API ключи
     breachka_api_key = "c151439eb6324be3aa935f9d7cc14c0e"
-    usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUxMzEzOTEzLCJhcHBfaWQiOjE3NTEzMTM5MTN9.kQ6vk8uk4fMDuUceQKQBLXeBOL6bynBWB8pH02dCCu8"
+    usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUxOTg0NTY1LCJhcHBfaWQiOjE3NTEzMTM5MTN9.pVrdFBE0wrutI9hvlZj74Od5I_nsEpLsNsLGsqQBYEk"
     depsearch_api_key = "eMn896XFtMwmsumDzO8aQVqs3X404z1D"
     
     if not breachka_api_key:
