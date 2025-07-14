@@ -188,7 +188,7 @@ def search_depsearch(query, api_key):
 def search_leakosint(query, search_type):
     """Функция для поиска через LeakOsint API"""
     tokens = [
-        "7949201327:7z2O7xWq",
+        "7791381618:Uvi9Sdaz",
     ]
     api_url = "https://leakosintapi.com/"
     
