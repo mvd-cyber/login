@@ -3,7 +3,6 @@ from requests import get
 import json
 import base64
 import random
-from textwrap import fill
 
 def print_banner():
     banner = """
@@ -26,7 +25,7 @@ def clean_data(data):
         cleaned = {}
         for key, value in data.items():
             # Убираем технические поля
-            if key.lower() in ['rows', 'count', 'status', 'error', 'success', 'message', 'score', '_id', 'index']:
+            if key.lower() in ['rows', 'count', 'status', 'error', 'success', 'message']:
                 continue
             if isinstance(value, (dict, list)):
                 cleaned_value = clean_data(value)
@@ -47,55 +46,42 @@ def clean_data(data):
     else:
         return data if data else None
 
-def format_value(value, indent=0, max_width=80):
-    """Форматирует значение для красивого вывода с переносами"""
+def format_value(value, indent=0):
+    """Форматирует значение для красивого вывода"""
     indent_str = " " * indent
     if isinstance(value, dict):
         result = ""
         for k, v in value.items():
-            formatted = format_value(v, indent + 4, max_width - indent - 4)
+            formatted = format_value(v, indent + 4)
             if formatted:
                 result += f"\n{indent_str}{k}: {formatted}"
         return result if result else None
     elif isinstance(value, list):
         result = ""
         for i, item in enumerate(value, 1):
-            formatted = format_value(item, indent + 4, max_width - indent - 4)
+            formatted = format_value(item, indent + 4)
             if formatted:
                 result += f"\n{indent_str}{i}. {formatted}"
         return result if result else None
     else:
-        if value is None:
-            return None
-        # Форматируем текст с переносами
-        text = str(value)
-        if len(text) > max_width - indent:
-            return fill(text, width=max_width - indent, subsequent_indent=' ' * (indent + 2))
-        return text
+        return str(value) if value else None
 
 def print_clean_data(data, source_name):
     """Выводит только чистые данные в красивом формате"""
-    print(f"\n╔{'═' * 50}╗")
-    print(f"║{f' РЕЗУЛЬТАТЫ ({source_name}) '.center(50)}║")
-    print(f"╚{'═' * 50}╝")
+    print(f"\n╔════════════════════════════════════════════════╗")
+    print(f"║               РЕЗУЛЬТАТЫ ({source_name})               ║")
+    print(f"╚════════════════════════════════════════════════╝")
     
     cleaned_data = clean_data(data)
     if not cleaned_data:
-        print("│ Нет данных для отображения".ljust(51) + "│")
-        print(f"╰{'─' * 50}╯")
+        print("Нет данных для отображения")
         return
     
     formatted = format_value(cleaned_data)
     if formatted:
-        # Разбиваем на строки и обрамляем
-        lines = formatted.split('\n')
-        print(f"╭{'─' * 50}╮")
-        for line in lines:
-            print(f"│ {line.ljust(48)} │")
-        print(f"╰{'─' * 50}╯")
+        print(formatted)
     else:
-        print("│ Данные не содержат полезной информации".ljust(51) + "│")
-        print(f"╰{'─' * 50}╯")
+        print("Данные не содержат полезной информации")
 
 def check_credentials(login, password):
     try:
@@ -222,7 +208,7 @@ def search_leakosint(query, search_type):
         return {"error": str(e)}
 
 def universal_search(query, breachka_api_key, usersbox_api_key):
-    """Универсальный поиск по доступным источникам"""
+    """Универсальный поиск по всем доступным источникам (без DepSearch)"""
     results = {}
     
     # Определяем тип запроса
@@ -293,7 +279,7 @@ def main():
     print("╚════════════════════════════════════════════════╝")
     
     # API ключи
-    breachka_api_key = "04f377017f8d46f2be1ff59198bbb514"
+    breachka_api_key = "a1db250fd83a497b96b61e47faafdc34"
     usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUxOTg0NTY1LCJhcHBfaWQiOjE3NTEzMTM5MTN9.pVrdFBE0wrutI9hvlZj74Od5I_nsEpLsNsLGsqQBYEk"
     
     if not breachka_api_key:
@@ -341,7 +327,7 @@ def main():
         print("\nВыполняем запросы...\n")
         
         if choice == "7":
-            # Универсальный поиск
+            # Универсальный поиск (без DepSearch)
             results = universal_search(query, breachka_api_key, usersbox_api_key)
             for source, data in results.items():
                 print_clean_data(data, source)
