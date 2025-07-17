@@ -279,7 +279,7 @@ def main():
     print("╚════════════════════════════════════════════════╝")
     
     # API ключи
-    breachka_api_key = "a1db250fd83a497b96b61e47faafdc34"
+    breachka_api_key = "04f377017f8d46f2be1ff59198bbb514"
     usersbox_api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoxNzUxOTg0NTY1LCJhcHBfaWQiOjE3NTEzMTM5MTN9.pVrdFBE0wrutI9hvlZj74Od5I_nsEpLsNsLGsqQBYEk"
     
     if not breachka_api_key:
