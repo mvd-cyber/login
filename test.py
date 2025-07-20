@@ -156,7 +156,7 @@ def search_usersbox(query, api_key):
 def search_leakosint(query, search_type):
     """Функция для поиска через LeakOsint API"""
     tokens = [
-        "7791381618:Uvi9Sdaz",
+        "7077934145:MEBUQ5ya",
     ]
     api_url = "https://leakosintapi.com/"
     
